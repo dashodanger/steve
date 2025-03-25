@@ -16,7 +16,7 @@ Drums::Drums(Music* music) : Creator(music) {}
 void Drums::init() {
   Creator::init();
   _channel = 9;
-  _repetition = 1;
+  //_repetition = 1;
   //_min_tone = 35;
   //_max_tone = 81;
 }
