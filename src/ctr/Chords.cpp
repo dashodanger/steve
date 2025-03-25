@@ -32,5 +32,6 @@ Notes Chords::get(size_t start, size_t size) const {
 }
 
 bool Chords::is_valid_instrument(const Instrument& instrument) const {
-  return instrument.voices >= 3;
+  return true; // Dasho - Test
+  // return instrument.voices >= 3;
 }

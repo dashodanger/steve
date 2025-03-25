@@ -11,8 +11,14 @@ Bass::Bass(Music* music)
 void Bass::init() {
   Creator::init();
 
-  _min_tone = 36;
-  _max_tone = _min_tone + 12;
+// Dasho - Min and Max tone match the instruments
+// that are valid for bass (IDs 32-39); original
+// values commented out below
+  _min_tone = 24;
+  _max_tone = 60;
+
+  //_min_tone = 36;
+  //_max_tone = _min_tone + 12;
 }
 Notes Bass::get(size_t start, size_t size) const {
   Notes notes;
@@ -29,6 +35,14 @@ Notes Bass::get(size_t start, size_t size) const {
   }
   return notes;
 }
-bool Bass::is_valid_instrument(const Instrument& instrument) const {
-  return instrument.min_tone <= 36 && instrument.max_tone >= 48;
+
+// Dasho - Select bass by instrument itself instead of tone;
+// original function commented out below
+bool Bass::is_valid_instrument(const Instrument &instrument) const
+{
+    return instrument.midi_id >= 32 && instrument.midi_id <= 39;
 }
+
+//bool Bass::is_valid_instrument(const Instrument& instrument) const {
+//  return instrument.min_tone <= 36 && instrument.max_tone >= 48;
+//}

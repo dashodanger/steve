@@ -4,6 +4,8 @@
 #include <cstring>
 #include <iostream>
 
+#include "Rand.h"
+
 using namespace steve;
 
 const char* steve::key_name(uint8_t key) {
@@ -74,7 +76,7 @@ void steve::add_note(Notes& notes, uint8_t channel, uint8_t tone, size_t start, 
   Note note;
   note.channel = channel;
   note.tone = tone;
-  note.velocity = velocity;
+  note.velocity = clamp(velocity + Rand::next_velocity_jitter(), 0, 127);
   note.duration = length;
   notes.insert(std::make_pair(start, note));
 }

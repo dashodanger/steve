@@ -13,6 +13,7 @@ namespace steve {
     static std::default_random_engine generator;
     static float next_float();
     static float next_normal();
+    static int   next_velocity_jitter();
 
     static uint32_t next(uint32_t min, uint32_t max); // Returns a random unsigned integer between min and max
     static uint64_t next(uint64_t min, uint64_t max); // Returns a random unsigned integer between min and max
