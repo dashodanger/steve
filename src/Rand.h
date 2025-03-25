@@ -25,12 +25,12 @@ namespace steve {
     template <class T>
     static const T& in(const std::set<T>& s) {
       auto it(s.begin());
-      std::advance(it, next(0ull, s.size()-1));
+      std::advance(it, next((uint64_t)0, (uint64_t)s.size() - 1));
       return *it;
     }
     template <class T>
     inline static const T& in(const std::vector<T>& v) {
-      return v[(unsigned int)next(0ull, v.size()-1)];
+      return v[(unsigned int)next((uint64_t)0, (uint64_t)v.size()-1)];
     }
   };
 }
