@@ -1,0 +1,80 @@
+{
+  "parents": ["base.steve.json"],
+  "tempo": {
+    "min": 80,
+    "max": 120,
+    "step": 5
+  },
+  "time_signatures": {
+    "2/2": {"weight": 2},
+    "2/4": {"weight": 2},
+    "4/4": {"weight": 4},
+    "7/4": {"weight": 0.5},
+    "9/8": {"weight": 0.1}
+  },
+  "creators": {
+    "Arpeggio": {
+      "min_count": 0,
+      "max_count": 1
+    },
+    "Bass": {
+      "min_count": 0,
+      "max_count": 2
+    },
+    "Chords": {
+      "min_count": 0,
+      "max_count": 3
+    },
+    "Drums": {
+      "min_count": 0,
+      "max_count": 1
+    },
+    "Melody": {
+      "min_count": 0,
+      "max_count": 3
+    }
+  },
+  "scales": {
+    "Harmonic Minor": {"whitelist": true},
+    "Pentatonic Minor": {"whitelist": true},
+    "Minor": {"whitelist": true}
+  },
+  "chords": {
+    "Power": {"whitelist": true},
+    "Major": {"whitelist": true},
+    "Minor": {"whitelist": true}
+  },
+  "chord_changes": {
+    "*": { "*": { "0": {"blacklist": true}}}
+  },
+  "instruments": {
+    "Acoustic Bass": {"whitelist": true},
+    "Electric Fingered Bass": {"whitelist": true},
+    "Electric Guitar (Clean)": {"whitelist": true},
+    "Electric Guitar (Muted)": {"whitelist": true},
+    "Electric Picked Bass": {"whitelist": true},
+    "Overdriven Guitar": {"whitelist": true},
+    "Distorted Guitar": {"whitelist": true},
+    "Fretless Bass": {"whitelist": true},
+    "Slap Bass 1": {"whitelist": true},
+    "Slap Bass 2": {"whitelist": true},
+    "Syn Bass 1": {"whitelist": true},
+    "Syn Bass 2": {"whitelist": true},
+    "String Ensemble": {"whitelist": true},
+    "String Ensemble 2 (Slow)": {"whitelist": true},
+    "Synth Drum": {"whitelist": true},
+
+    "Guitar Harmonics": {"blacklist": true},
+    "Bottle Blow": {"blacklist": true},
+    "Whistle": {"blacklist": true},
+    "Reverse Cymbal": {"blacklist": true},
+    "Guitar Fret Noise": {"blacklist": true},
+    "Breath Noise": {"blacklist": true},
+    "Seashore": {"blacklist": true},
+    "Bird Tweet": {"blacklist": true},
+    "Telephone Ring": {"blacklist": true},
+    "Helicopter": {"blacklist": true},
+    "Applause": {"blacklist": true},
+    "Gunshot": {"blacklist": true}
+  }
+}
